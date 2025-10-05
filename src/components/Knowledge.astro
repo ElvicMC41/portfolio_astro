@@ -1,0 +1,21 @@
+---
+import { knowledge } from "../utils/knowledge";
+console.log(knowledge);
+---
+
+<h2
+    class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+>
+    Conocimiento en
+</h2>
+<div class="flex flex-row gap-3 p-3 flex-wrap pr-4 mb-10 justify-center animate-flip-up animate-once animate-duration-[1500ms]">
+    {
+        knowledge.map((value, idx) => (
+            <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7edf3] dark:bg-[#7390b4] pl-4 pr-4 mb-4">
+                <p class="text-[#0d141b] dark:text-white text-sm font-medium leading-normal">
+                    {value.name}
+                </p>
+            </div>
+        ))
+    }
+</div>

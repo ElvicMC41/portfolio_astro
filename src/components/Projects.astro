@@ -1,0 +1,31 @@
+---
+import { projects } from "../utils/projects";
+---
+
+<h2
+    class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+>
+    Mis proyectos
+</h2>
+<div class="w-[100%]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-4 mx-10">
+        {
+            projects.map((project, idx) => (
+                <div class="flex flex-col gap-3 pb-10">
+                    <div
+                        class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                        style={`background-image: url(${project.image});`}
+                    ></div>
+                    <div>
+                        <p class="text-[#0d141b] dark:text-white text-base font-medium leading-normal">
+                            {project.name}
+                        </p>
+                        <p class="text-[#3a3d3f] dark:text-[#8b9195] text-sm font-normal leading-normal">
+                            {project.description}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
